@@ -3,7 +3,7 @@
 
 [![NPM](https://nodei.co/npm/foreman.png?downloads=true)](https://www.npmjs.com/package/foreman)
 
-[![apidoc](https://npmdoc.github.io/node-npmdoc-foreman/build/screenCapture.buildNpmdoc.browser.%2Fhome%2Ftravis%2Fbuild%2Fnpmdoc%2Fnode-npmdoc-foreman%2Ftmp%2Fbuild%2Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-foreman/build/apidoc.html)
+[![apidoc](https://npmdoc.github.io/node-npmdoc-foreman/build/screenCapture.buildApidoc.browser.%252Fhome%252Ftravis%252Fbuild%252Fnpmdoc%252Fnode-npmdoc-foreman%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-foreman/build/apidoc.html)
 
 ![npmPackageListing](https://npmdoc.github.io/node-npmdoc-foreman/build/screenCapture.npmPackageListing.svg)
 
