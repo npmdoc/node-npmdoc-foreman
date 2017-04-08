@@ -1,0 +1,1183 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="http://strongloop.github.io/node-foreman/">foreman (v2.0.0)</a>
+</h1>
+<h4>Node Implementation of Foreman</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.foreman">module foreman</a><ol>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">foreman.</span>colors</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">foreman.</span>envs</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">foreman.</span>forward</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">foreman.</span>proc</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">foreman.</span>procfile</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">foreman.</span>proxy</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">foreman.</span>requirements</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.foreman.colors">module foreman.colors</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.foreman.colors.blue">
+            function <span class="apidocSignatureSpan">foreman.colors.</span>blue
+            <span class="apidocSignatureSpan">(self)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.foreman.colors.bright_blue">
+            function <span class="apidocSignatureSpan">foreman.colors.</span>bright_blue
+            <span class="apidocSignatureSpan">(self)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.foreman.colors.bright_cyan">
+            function <span class="apidocSignatureSpan">foreman.colors.</span>bright_cyan
+            <span class="apidocSignatureSpan">(self)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.foreman.colors.bright_green">
+            function <span class="apidocSignatureSpan">foreman.colors.</span>bright_green
+            <span class="apidocSignatureSpan">(self)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.foreman.colors.bright_magenta">
+            function <span class="apidocSignatureSpan">foreman.colors.</span>bright_magenta
+            <span class="apidocSignatureSpan">(self)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.foreman.colors.bright_red">
+            function <span class="apidocSignatureSpan">foreman.colors.</span>bright_red
+            <span class="apidocSignatureSpan">(self)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.foreman.colors.bright_yellow">
+            function <span class="apidocSignatureSpan">foreman.colors.</span>bright_yellow
+            <span class="apidocSignatureSpan">(self)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.foreman.colors.cyan">
+            function <span class="apidocSignatureSpan">foreman.colors.</span>cyan
+            <span class="apidocSignatureSpan">(self)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.foreman.colors.green">
+            function <span class="apidocSignatureSpan">foreman.colors.</span>green
+            <span class="apidocSignatureSpan">(self)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.foreman.colors.magenta">
+            function <span class="apidocSignatureSpan">foreman.colors.</span>magenta
+            <span class="apidocSignatureSpan">(self)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.foreman.colors.red">
+            function <span class="apidocSignatureSpan">foreman.colors.</span>red
+            <span class="apidocSignatureSpan">(self)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.foreman.colors.yellow">
+            function <span class="apidocSignatureSpan">foreman.colors.</span>yellow
+            <span class="apidocSignatureSpan">(self)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">foreman.colors.</span>colors_max</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">foreman.</span>colors</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.foreman.envs">module foreman.envs</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.foreman.envs.dumpEnv">
+            function <span class="apidocSignatureSpan">foreman.envs.</span>dumpEnv
+            <span class="apidocSignatureSpan">(conf)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.foreman.envs.flattenJSON">
+            function <span class="apidocSignatureSpan">foreman.envs.</span>flattenJSON
+            <span class="apidocSignatureSpan">(json)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.foreman.envs.keyValue">
+            function <span class="apidocSignatureSpan">foreman.envs.</span>keyValue
+            <span class="apidocSignatureSpan">(data)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.foreman.envs.loadEnvs">
+            function <span class="apidocSignatureSpan">foreman.envs.</span>loadEnvs
+            <span class="apidocSignatureSpan">(path)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.foreman.forward">module foreman.forward</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.foreman.forward.startForward">
+            function <span class="apidocSignatureSpan">foreman.forward.</span>startForward
+            <span class="apidocSignatureSpan">(port, hostname, emitter)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.foreman.proc">module foreman.proc</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.foreman.proc.once">
+            function <span class="apidocSignatureSpan">foreman.proc.</span>once
+            <span class="apidocSignatureSpan">(input, envs, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.foreman.proc.run">
+            function <span class="apidocSignatureSpan">foreman.proc.</span>run
+            <span class="apidocSignatureSpan">(key, proc, emitter)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.foreman.proc.start">
+            function <span class="apidocSignatureSpan">foreman.proc.</span>start
+            <span class="apidocSignatureSpan">(procs, requirements, envs, portarg, emitter)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.foreman.procfile">module foreman.procfile</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.foreman.procfile.loadProc">
+            function <span class="apidocSignatureSpan">foreman.procfile.</span>loadProc
+            <span class="apidocSignatureSpan">(filename)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.foreman.procfile.procs">
+            function <span class="apidocSignatureSpan">foreman.procfile.</span>procs
+            <span class="apidocSignatureSpan">(procdata)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.foreman.proxy">module foreman.proxy</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.foreman.proxy.startProxies">
+            function <span class="apidocSignatureSpan">foreman.proxy.</span>startProxies
+            <span class="apidocSignatureSpan">(reqs, proc, command, emitter, portargs)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.foreman.requirements">module foreman.requirements</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.foreman.requirements.calculatePadding">
+            function <span class="apidocSignatureSpan">foreman.requirements.</span>calculatePadding
+            <span class="apidocSignatureSpan">(reqs)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.foreman.requirements.getreqs">
+            function <span class="apidocSignatureSpan">foreman.requirements.</span>getreqs
+            <span class="apidocSignatureSpan">(args, proc)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.foreman" id="apidoc.module.foreman">module foreman</a></h1>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.foreman.colors" id="apidoc.module.foreman.colors">module foreman.colors</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.foreman.colors.blue" id="apidoc.element.foreman.colors.blue">
+        function <span class="apidocSignatureSpan">foreman.colors.</span>blue
+        <span class="apidocSignatureSpan">(self)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function identity(self) {
+  return self;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.foreman.colors.bright_blue" id="apidoc.element.foreman.colors.bright_blue">
+        function <span class="apidocSignatureSpan">foreman.colors.</span>bright_blue
+        <span class="apidocSignatureSpan">(self)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function identity(self) {
+  return self;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.foreman.colors.bright_cyan" id="apidoc.element.foreman.colors.bright_cyan">
+        function <span class="apidocSignatureSpan">foreman.colors.</span>bright_cyan
+        <span class="apidocSignatureSpan">(self)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function identity(self) {
+  return self;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.foreman.colors.bright_green" id="apidoc.element.foreman.colors.bright_green">
+        function <span class="apidocSignatureSpan">foreman.colors.</span>bright_green
+        <span class="apidocSignatureSpan">(self)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function identity(self) {
+  return self;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.foreman.colors.bright_magenta" id="apidoc.element.foreman.colors.bright_magenta">
+        function <span class="apidocSignatureSpan">foreman.colors.</span>bright_magenta
+        <span class="apidocSignatureSpan">(self)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function identity(self) {
+  return self;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.foreman.colors.bright_red" id="apidoc.element.foreman.colors.bright_red">
+        function <span class="apidocSignatureSpan">foreman.colors.</span>bright_red
+        <span class="apidocSignatureSpan">(self)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function identity(self) {
+  return self;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  };
+
+  this.Warn = function Warn() {
+    logger.warn(colors.yellow('[WARN] ' + this.fmt.apply(null, arguments)));
+  };
+
+  this.Error = function Error() {
+    logger.error(colors.<span class="apidocCodeKeywordSpan">bright_red</span>('[FAIL] ' + this.fmt.apply(null,arguments
+)));
+  };
+
+}
+
+module.exports = Console;
+Console.Console = new Console();
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.foreman.colors.bright_yellow" id="apidoc.element.foreman.colors.bright_yellow">
+        function <span class="apidocSignatureSpan">foreman.colors.</span>bright_yellow
+        <span class="apidocSignatureSpan">(self)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function identity(self) {
+  return self;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    return ppath.resolve(__dirname, type, file);
+  }
+}
+
+function writeout(path) {
+  return function(data) {
+    if (fs.existsSync(path)) {
+      display.Warn(colors.<span class="apidocCodeKeywordSpan">bright_yellow</span>('Replacing: %s'), path);
+    }
+
+    fs.writeFileSync(path,data);
+    display.Alert('Wrote  :',ppath.normalize(path));
+  };
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.foreman.colors.cyan" id="apidoc.element.foreman.colors.cyan">
+        function <span class="apidocSignatureSpan">foreman.colors.</span>cyan
+        <span class="apidocSignatureSpan">(self)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function identity(self) {
+  return self;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+};
+
+this.trim = trim;
+
+// Process Specific Loggers //
+this.info = function info(key, proc, string) {
+  var stamp = (new Date().toLocaleTimeString()) + " " + key;
+  logger.log(proc.color(this.pad(stamp,this.padding)), colors.<span class="apidocCodeKeywordSpan">cyan</span>(string));
+};
+
+this.error = function error(key, proc, string) {
+  var stamp = (new Date().toLocaleTimeString()) + " " + key;
+  logger.error(proc.color(this.pad(stamp,this.padding)), colors.red(string));
+};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.foreman.colors.green" id="apidoc.element.foreman.colors.green">
+        function <span class="apidocSignatureSpan">foreman.colors.</span>green
+        <span class="apidocSignatureSpan">(self)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function identity(self) {
+  return self;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+  });
+};
+
+// Foreman Loggers //
+
+this.Alert = function Alert() {
+  logger.log(colors.<span class="apidocCodeKeywordSpan">green</span>('[OKAY] '+ this.fmt.apply(null, arguments)));
+};
+
+this.Done = function Info() {
+  logger.log(colors.cyan('[DONE] ' + this.fmt.apply(null, arguments)));
+};
+
+this.Warn = function Warn() {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.foreman.colors.magenta" id="apidoc.element.foreman.colors.magenta">
+        function <span class="apidocSignatureSpan">foreman.colors.</span>magenta
+        <span class="apidocSignatureSpan">(self)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function identity(self) {
+  return self;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+program.parse(process.argv);
+
+if (!process.argv.slice(2).length) {
+  console.log(colors.cyan('   _____                           '));
+  console.log(colors.cyan('  |   __|___ ___ ___ _____ ___ ___ '));
+  console.log(colors.yellow('  |   __| . |  _| -_|     |   |   |'));
+  console.log(colors.<span class="apidocCodeKeywordSpan">magenta</span>('  |__|  |___|_| |___|_|_|_|_^_|_|_|'));
+  program.outputHelp();
+  process.exit(1);
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.foreman.colors.red" id="apidoc.element.foreman.colors.red">
+        function <span class="apidocSignatureSpan">foreman.colors.</span>red
+        <span class="apidocSignatureSpan">(self)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function identity(self) {
+  return self;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  this.info = function info(key, proc, string) {
+var stamp = (new Date().toLocaleTimeString()) + " " + key;
+logger.log(proc.color(this.pad(stamp,this.padding)), colors.cyan(string));
+  };
+
+  this.error = function error(key, proc, string) {
+var stamp = (new Date().toLocaleTimeString()) + " " + key;
+logger.error(proc.color(this.pad(stamp,this.padding)), colors.<span class="apidocCodeKeywordSpan">red</span>(string));
+  };
+
+  this.log = function log(key, proc, string) {
+var self = this;
+
+if(self.raw) {
+  logger.log(string);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.foreman.colors.yellow" id="apidoc.element.foreman.colors.yellow">
+        function <span class="apidocSignatureSpan">foreman.colors.</span>yellow
+        <span class="apidocSignatureSpan">(self)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function identity(self) {
+  return self;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  };
+
+  this.Done = function Info() {
+    logger.log(colors.cyan('[DONE] ' + this.fmt.apply(null, arguments)));
+  };
+
+  this.Warn = function Warn() {
+    logger.warn(colors.<span class="apidocCodeKeywordSpan">yellow</span>('[WARN] ' + this.fmt.apply(null, arguments)));
+  };
+
+  this.Error = function Error() {
+    logger.error(colors.bright_red('[FAIL] ' + this.fmt.apply(null,arguments)));
+  };
+
+}
+...</pre></li>
+    </ul>
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.foreman.envs" id="apidoc.module.foreman.envs">module foreman.envs</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.foreman.envs.dumpEnv" id="apidoc.element.foreman.envs.dumpEnv">
+        function <span class="apidocSignatureSpan">foreman.envs.</span>dumpEnv
+        <span class="apidocSignatureSpan">(conf)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function dumpEnv(conf) {
+  var output = [];
+  for (var key in conf) {
+    output.push(key + '=' + conf[key]);
+  }
+  return output.sort().join('\n') + '\n';
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.foreman.envs.flattenJSON" id="apidoc.element.foreman.envs.flattenJSON">
+        function <span class="apidocSignatureSpan">foreman.envs.</span>flattenJSON
+        <span class="apidocSignatureSpan">(json)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function flattenJSON(json) {
+  var flattened = {};
+
+  walk(json, function(path, item) {
+    flattened[path.join('_').toUpperCase()] = item;
+  });
+
+  return flattened;
+
+  function walk(obj, visitor, path) {
+    var item;
+    path = path || [];
+    for (var key in obj) {
+      item = obj[key];
+      if (typeof item === 'object') {
+        walk(item, visitor, path.concat(key));
+      } else {
+        visitor(path.concat(key), item);
+      }
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.foreman.envs.keyValue" id="apidoc.element.foreman.envs.keyValue">
+        function <span class="apidocSignatureSpan">foreman.envs.</span>keyValue
+        <span class="apidocSignatureSpan">(data)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function keyValue(data) {
+  var env = {};
+
+  data
+    .toString()
+    .replace(/^\s*\#.*$/gm,'')
+    .replace(/^\s*$/gm,'')
+    .split(/\n/)
+    .map(method('trim'))
+    .filter(notBlank)
+    .forEach(capturePair);
+
+  return env;
+
+  function notBlank(str) {
+    return str.length &gt; 2;
+  }
+
+  function capturePair(line) {
+    var pair = line.split('=');
+    var key = pair[0].trim();
+    var rawVal = pair.slice(1).join('=').trim();
+    env[key] = parseValue(rawVal);
+  }
+
+  function parseValue(val) {
+    switch (val[0]) {
+      case '"': return /^"([^"]*)"/.exec(val)[1];
+      case "'": return /^'([^']*)'/.exec(val)[1];
+      default : return val.replace(/\s*\#.*$/, '');
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.foreman.envs.loadEnvs" id="apidoc.element.foreman.envs.loadEnvs">
+        function <span class="apidocSignatureSpan">foreman.envs.</span>loadEnvs
+        <span class="apidocSignatureSpan">(path)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function loadEnvs(path) {
+  var envs = path.split(',').map(loadEnvsFile).reduce(util._extend, {});
+  var sorted = Object.create(null);
+  Object.keys(envs).sort().forEach(function(k) {
+    sorted[k] = envs[k];
+  });
+  return sorted;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.foreman.forward" id="apidoc.module.foreman.forward">module foreman.forward</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.foreman.forward.startForward" id="apidoc.element.foreman.forward.startForward">
+        function <span class="apidocSignatureSpan">foreman.forward.</span>startForward
+        <span class="apidocSignatureSpan">(port, hostname, emitter)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function startForward(port, hostname, emitter) {
+  var proc = prog.fork(__dirname + '/../forward.js', [], {
+    env: {
+      PROXY_PORT: port,
+      PROXY_HOST: hostname || '&lt;ANY&gt;'
+    }
+  });
+  cons.Alert('Forward Proxy Started in Port %d', port);
+  if(hostname) {
+    cons.Alert('Intercepting requests to %s through forward proxy', hostname);
+  } else {
+    cons.Alert('Intercepting ALL requests through forward proxy');
+  }
+  emitter.once('killall', function(signal) {
+    cons.Done('Killing Forward Proxy Server on Port %d',port);
+    proc.kill(signal);
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.foreman.proc" id="apidoc.module.foreman.proc">module foreman.proc</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.foreman.proc.once" id="apidoc.element.foreman.proc.once">
+        function <span class="apidocSignatureSpan">foreman.proc.</span>once
+        <span class="apidocSignatureSpan">(input, envs, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function once(input, envs, callback) {
+  var file, args;
+  var proc = {
+    command : input,
+    env     : merge(merge({}, process.env), envs)
+  };
+
+  if (platform === 'win32') {
+    file = process.env.comspec || 'cmd.exe';
+    args = ['/s', '/c', proc.command];
+  } else {
+    file = '/bin/sh';
+    args = ['-c', proc.command];
+  }
+
+  var child = prog.spawn(file, args, { env: proc.env, stdio: 'inherit' });
+
+  child.on('close', function(code) {
+    callback(code);
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  });
+  cons.Alert('Forward Proxy Started in Port %d', port);
+  if(hostname) {
+    cons.Alert('Intercepting requests to %s through forward proxy', hostname);
+  } else {
+    cons.Alert('Intercepting ALL requests through forward proxy');
+  }
+  emitter.<span class="apidocCodeKeywordSpan">once</span>('killall', function(signal) {
+    cons.Done('Killing Forward Proxy Server on Port %d',port);
+    proc.kill(signal);
+  });
+}
+
+module.exports.startForward = startForward;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.foreman.proc.run" id="apidoc.element.foreman.proc.run">
+        function <span class="apidocSignatureSpan">foreman.proc.</span>run
+        <span class="apidocSignatureSpan">(key, proc, emitter)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function run(key, proc, emitter) {
+  var file, args;
+  if (platform === 'win32') {
+    file = process.env.comspec || 'cmd.exe';
+    args = ['/s', '/c', proc.command];
+  } else {
+    file = '/bin/sh';
+    args = ['-c', proc.command];
+  }
+  var child = prog.spawn(file, args, { env: proc.env });
+
+  child.stdout.on('data', function(data) {
+    cons.log(key, proc, data.toString());
+  });
+
+  child.stderr.on('data', function(data) {
+    cons.log(key, proc, data.toString());
+  });
+
+  child.on('close', function(code) {
+    if(code === 0) {
+      cons.info(key, proc, "Exited Successfully");
+    } else {
+      cons.error(key, proc, "Exited with exit code " + code);
+    }
+  });
+
+  child.on('exit', function(code, signal) {
+    emitter.emit('killall', signal);
+  });
+
+  emitter.on('killall', function(signal) {
+    child.kill(signal);
+  });
+
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.foreman.proc.start" id="apidoc.element.foreman.proc.start">
+        function <span class="apidocSignatureSpan">foreman.proc.</span>start
+        <span class="apidocSignatureSpan">(procs, requirements, envs, portarg, emitter)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function start(procs, requirements, envs, portarg, emitter){
+
+  var j = 0;
+  var k = 0;
+  var port = parseInt(portarg);
+
+  if(port &lt; 1024) {
+    return cons.Error('Only Proxies Can Bind to Privileged Ports - '+
+                      'Try \'sudo nf start -x %s\'', port);
+  }
+
+
+  for(var key in requirements) {
+    var n = parseInt(requirements[key]);
+
+    for(var i = 0; i &lt; n; i++) {
+
+      var color_val = (j + k) % colors_max;
+
+      if (!procs[key]) {
+        cons.Warn("Required Key '%s' Does Not Exist in Procfile Definition", key);
+        continue;
+      }
+
+      var p = {
+        command : procs[key],
+        color   : colors[color_val],
+        env     : merge(merge({}, process.env), envs)
+      };
+
+      p.env.PORT = port + j + k * 100;
+      p.env.FOREMAN_WORKER_NAME = p.env.FOREMAN_WORKER_NAME || key + "." + (i + 1);
+
+      run(key + "." + (i + 1), p, emitter);
+
+      j++;
+
+    }
+    j = 0;
+    k++;
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.foreman.procfile" id="apidoc.module.foreman.procfile">module foreman.procfile</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.foreman.procfile.loadProc" id="apidoc.element.foreman.procfile.loadProc">
+        function <span class="apidocSignatureSpan">foreman.procfile.</span>loadProc
+        <span class="apidocSignatureSpan">(filename)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function loadProc(filename) {
+
+  try {
+    var data = fs.readFileSync(filename);
+    return procs(data);
+  } catch(e) {
+    cons.Warn(e.message);
+    if(fs.existsSync('package.json')) {
+      cons.Alert("package.json file found - trying 'npm start'");
+      return procs("web: npm start");
+    } else {
+      cons.Error("No Procfile and no package.json file found in Current Directory - See " + path.basename(process.argv[1]) + " --
+help");
+      return;
+    }
+  }
+
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.foreman.procfile.procs" id="apidoc.element.foreman.procfile.procs">
+        function <span class="apidocSignatureSpan">foreman.procfile.</span>procs
+        <span class="apidocSignatureSpan">(procdata)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function procs(procdata){
+
+  var processes = {};
+
+  procdata.toString().split(/\n/).forEach(function(line) {
+    if(!line || line[0] === '#') { return; }
+
+    var tuple = /^([A-Za-z0-9_-]+):\s*(.+)$/m.exec(line);
+
+    var prockey = tuple[1].trim();
+    var command = tuple[2].trim();
+
+    if(!prockey) {
+      throw new Error('Syntax Error in Procfile, Line %d: No Prockey Found');
+    }
+
+    if(!command) {
+      throw new Error('Syntax Error in Procfile, Line %d: No Command Found');
+    }
+
+    processes[prockey] = command;
+  });
+
+  return processes;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.foreman.proxy" id="apidoc.module.foreman.proxy">module foreman.proxy</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.foreman.proxy.startProxies" id="apidoc.element.foreman.proxy.startProxies">
+        function <span class="apidocSignatureSpan">foreman.proxy.</span>startProxies
+        <span class="apidocSignatureSpan">(reqs, proc, command, emitter, portargs)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function startProxies(reqs, proc, command, emitter, portargs) {
+
+  if ('proxy' in command) {
+
+    var localhost = 'localhost';
+
+    var ports = command.proxy.split(',');
+
+    var ssl = {
+      cert: '',
+      key:  ''
+    };
+    if ((command.sslKey &amp;&amp; !command.sslCert) ||
+        (command.sslCert &amp;&amp; !command.sslKey)) {
+      cons.Warn('SSL key and cert must both be supplied for SSL support');
+    }
+    if (command.sslKey &amp;&amp; command.sslCert) {
+      command.sslKey = path.resolve(command.sslKey);
+      command.sslCert = path.resolve(command.sslCert);
+      if (!fs.existsSync(command.sslKey)) {
+        cons.Warn('SSL key (%s) does not exist', command.sslKey);
+      }
+      else {
+        ssl.key = command.sslKey;
+      }
+      if (!fs.existsSync(command.sslCert)) {
+        cons.Warn('SSL cert (%s) does not exist', command.sslCert);
+      }
+      else {
+        ssl.cert = command.sslCert;
+      }
+    }
+
+    Object.keys(reqs).forEach(function(key, i) {
+      f(key, i, ports, proc, reqs, portargs, localhost, emitter, ssl);
+    });
+  }
+
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.foreman.requirements" id="apidoc.module.foreman.requirements">module foreman.requirements</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.foreman.requirements.calculatePadding" id="apidoc.element.foreman.requirements.calculatePadding">
+        function <span class="apidocSignatureSpan">foreman.requirements.</span>calculatePadding
+        <span class="apidocSignatureSpan">(reqs)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function calculatePadding(reqs) {
+  var padding = 0;
+  for(var key in reqs){
+    var num = reqs[key];
+    var len = key.length + num.toString().length;
+    if(len &gt; padding) {
+      padding = len;
+    }
+  }
+  return padding + 12;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.foreman.requirements.getreqs" id="apidoc.element.foreman.requirements.getreqs">
+        function <span class="apidocSignatureSpan">foreman.requirements.</span>getreqs
+        <span class="apidocSignatureSpan">(args, proc)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getreqs(args, proc) {
+  var req;
+  if(args &amp;&amp; args.length &gt; 0) {
+    // Run Specific Procs
+    req = parseRequirements(args);
+  } else {
+    // All
+    req = {};
+    for(var key in proc){
+      req[key] = 1;
+    }
+  }
+  return req;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
