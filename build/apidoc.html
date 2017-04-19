@@ -75,12 +75,6 @@
 
         <li>
 
-            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">foreman.</span>forward</span>
-
-        </li>
-
-        <li>
-
             <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">foreman.</span>proc</span>
 
         </li>
@@ -88,12 +82,6 @@
         <li>
 
             <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">foreman.</span>procfile</span>
-
-        </li>
-
-        <li>
-
-            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">foreman.</span>proxy</span>
 
         </li>
 
@@ -269,19 +257,6 @@
 
     </ol></li>
 
-    <li class="apidocModuleLi"><a href="#apidoc.module.foreman.forward">module foreman.forward</a><ol>
-
-        <li>
-
-            <a class="apidocElementLiA" href="#apidoc.element.foreman.forward.startForward">
-            function <span class="apidocSignatureSpan">foreman.forward.</span>startForward
-            <span class="apidocSignatureSpan">(port, hostname, emitter)</span>
-            </a>
-
-        </li>
-
-    </ol></li>
-
     <li class="apidocModuleLi"><a href="#apidoc.module.foreman.proc">module foreman.proc</a><ol>
 
         <li>
@@ -335,19 +310,6 @@
 
     </ol></li>
 
-    <li class="apidocModuleLi"><a href="#apidoc.module.foreman.proxy">module foreman.proxy</a><ol>
-
-        <li>
-
-            <a class="apidocElementLiA" href="#apidoc.element.foreman.proxy.startProxies">
-            function <span class="apidocSignatureSpan">foreman.proxy.</span>startProxies
-            <span class="apidocSignatureSpan">(reqs, proc, command, emitter, portargs)</span>
-            </a>
-
-        </li>
-
-    </ol></li>
-
     <li class="apidocModuleLi"><a href="#apidoc.module.foreman.requirements">module foreman.requirements</a><ol>
 
         <li>
@@ -374,10 +336,6 @@
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.foreman" id="apidoc.module.foreman">module foreman</a></h1>
-
-
-
-
 
 
 
@@ -542,20 +500,20 @@ function writeout(path) {
   return colors[color] + str + reset;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-};
+    writeout.foreman(config,command.out);
 
-this.trim = trim;
+  });
 
-// Process Specific Loggers //
-this.info = function info(key, proc, string) {
-  var stamp = (new Date().toLocaleTimeString()) + &#x22; &#x22; + key;
-  logger.log(proc.color(this.pad(stamp,this.padding)), colors.<span class="apidocCodeKeywordSpan">cyan</span>(string));
-};
+program.parse(process.argv);
 
-this.error = function error(key, proc, string) {
-  var stamp = (new Date().toLocaleTimeString()) + &#x22; &#x22; + key;
-  logger.error(proc.color(this.pad(stamp,this.padding)), colors.red(string));
-};
+if (!process.argv.slice(2).length) {
+  console.log(colors.<span class="apidocCodeKeywordSpan">cyan</span>(&#x27;   _____                           &#x27;));
+  console.log(colors.cyan(&#x27;  |   __|___ ___ ___ _____ ___ ___ &#x27;));
+  console.log(colors.yellow(&#x27;  |   __| . |  _| -_|     |   |   |&#x27;));
+  console.log(colors.magenta(&#x27;  |__|  |___|_| |___|_|_|_|_^_|_|_|&#x27;));
+  program.outputHelp();
+  process.exit(1);
+}
 ...</pre></li>
     </ul>
 
@@ -661,20 +619,17 @@ if(self.raw) {
   return colors[color] + str + reset;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-  };
+  });
 
-  this.Done = function Info() {
-    logger.log(colors.cyan(&#x27;[DONE] &#x27; + this.fmt.apply(null, arguments)));
-  };
+program.parse(process.argv);
 
-  this.Warn = function Warn() {
-    logger.warn(colors.<span class="apidocCodeKeywordSpan">yellow</span>(&#x27;[WARN] &#x27; + this.fmt.apply(null, arguments)));
-  };
-
-  this.Error = function Error() {
-    logger.error(colors.bright_red(&#x27;[FAIL] &#x27; + this.fmt.apply(null,arguments)));
-  };
-
+if (!process.argv.slice(2).length) {
+  console.log(colors.cyan(&#x27;   _____                           &#x27;));
+  console.log(colors.cyan(&#x27;  |   __|___ ___ ___ _____ ___ ___ &#x27;));
+  console.log(colors.<span class="apidocCodeKeywordSpan">yellow</span>(&#x27;  |   __| . |  _| -_|     |   |   |&#x27;));
+  console.log(colors.magenta(&#x27;  |__|  |___|_| |___|_|_|_|_^_|_|_|&#x27;));
+  program.outputHelp();
+  process.exit(1);
 }
 ...</pre></li>
     </ul>
@@ -810,41 +765,6 @@ if(self.raw) {
 </div>
 
 <div class="apidocSectionDiv">
-<h1><a href="#apidoc.module.foreman.forward" id="apidoc.module.foreman.forward">module foreman.forward</a></h1>
-
-
-    <h2>
-        <a href="#apidoc.element.foreman.forward.startForward" id="apidoc.element.foreman.forward.startForward">
-        function <span class="apidocSignatureSpan">foreman.forward.</span>startForward
-        <span class="apidocSignatureSpan">(port, hostname, emitter)</span>
-        </a>
-    </h2>
-    <ul>
-    <li>description and source-code<pre class="apidocCodePre">function startForward(port, hostname, emitter) {
-  var proc = prog.fork(__dirname + &#x27;/../forward.js&#x27;, [], {
-    env: {
-      PROXY_PORT: port,
-      PROXY_HOST: hostname || &#x27;&#x3c;ANY&#x3e;&#x27;
-    }
-  });
-  cons.Alert(&#x27;Forward Proxy Started in Port %d&#x27;, port);
-  if(hostname) {
-    cons.Alert(&#x27;Intercepting requests to %s through forward proxy&#x27;, hostname);
-  } else {
-    cons.Alert(&#x27;Intercepting ALL requests through forward proxy&#x27;);
-  }
-  emitter.once(&#x27;killall&#x27;, function(signal) {
-    cons.Done(&#x27;Killing Forward Proxy Server on Port %d&#x27;,port);
-    proc.kill(signal);
-  });
-}</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
-    </ul>
-
-
-</div>
-
-<div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.foreman.proc" id="apidoc.module.foreman.proc">module foreman.proc</a></h1>
 
 
@@ -877,20 +797,22 @@ if(self.raw) {
   });
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-  });
-  cons.Alert(&#x27;Forward Proxy Started in Port %d&#x27;, port);
-  if(hostname) {
-    cons.Alert(&#x27;Intercepting requests to %s through forward proxy&#x27;, hostname);
-  } else {
-    cons.Alert(&#x27;Intercepting ALL requests through forward proxy&#x27;);
-  }
-  emitter.<span class="apidocCodeKeywordSpan">once</span>(&#x27;killall&#x27;, function(signal) {
-    cons.Done(&#x27;Killing Forward Proxy Server on Port %d&#x27;,port);
-    proc.kill(signal);
-  });
-}
+program.option(&#x27;-e, --env      &#x3c;FILE&#x3e;&#x27; ,&#x27;load environment from FILE, a comma-separated list&#x27;,&#x27
+;.env&#x27;);
+program.option(&#x27;-p, --port     &#x3c;PORT&#x3e;&#x27; ,&#x27;start indexing ports at number PORT&#x27;,0);
 
-module.exports.startForward = startForward;
+
+// Foreman Event Bus/Emitter //
+
+var emitter = new events.EventEmitter();
+emitter.<span class="apidocCodeKeywordSpan">once</span>(&#x27;killall&#x27;,function(signal){
+  display.Done(&#x22;Killing all processes with signal &#x22;, signal);
+});
+emitter.setMaxListeners(50);
+
+var _proc = require(&#x27;./lib/proc&#x27;);
+var start = _proc.start;
+var once  = _proc.once;
 ...</pre></li>
     </ul>
 
@@ -1064,62 +986,6 @@ help&#x22;);
   });
 
   return processes;
-}</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
-    </ul>
-
-
-</div>
-
-<div class="apidocSectionDiv">
-<h1><a href="#apidoc.module.foreman.proxy" id="apidoc.module.foreman.proxy">module foreman.proxy</a></h1>
-
-
-    <h2>
-        <a href="#apidoc.element.foreman.proxy.startProxies" id="apidoc.element.foreman.proxy.startProxies">
-        function <span class="apidocSignatureSpan">foreman.proxy.</span>startProxies
-        <span class="apidocSignatureSpan">(reqs, proc, command, emitter, portargs)</span>
-        </a>
-    </h2>
-    <ul>
-    <li>description and source-code<pre class="apidocCodePre">function startProxies(reqs, proc, command, emitter, portargs) {
-
-  if (&#x27;proxy&#x27; in command) {
-
-    var localhost = &#x27;localhost&#x27;;
-
-    var ports = command.proxy.split(&#x27;,&#x27;);
-
-    var ssl = {
-      cert: &#x27;&#x27;,
-      key:  &#x27;&#x27;
-    };
-    if ((command.sslKey &#x26;&#x26; !command.sslCert) ||
-        (command.sslCert &#x26;&#x26; !command.sslKey)) {
-      cons.Warn(&#x27;SSL key and cert must both be supplied for SSL support&#x27;);
-    }
-    if (command.sslKey &#x26;&#x26; command.sslCert) {
-      command.sslKey = path.resolve(command.sslKey);
-      command.sslCert = path.resolve(command.sslCert);
-      if (!fs.existsSync(command.sslKey)) {
-        cons.Warn(&#x27;SSL key (%s) does not exist&#x27;, command.sslKey);
-      }
-      else {
-        ssl.key = command.sslKey;
-      }
-      if (!fs.existsSync(command.sslCert)) {
-        cons.Warn(&#x27;SSL cert (%s) does not exist&#x27;, command.sslCert);
-      }
-      else {
-        ssl.cert = command.sslCert;
-      }
-    }
-
-    Object.keys(reqs).forEach(function(key, i) {
-      f(key, i, ports, proc, reqs, portargs, localhost, emitter, ssl);
-    });
-  }
-
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
